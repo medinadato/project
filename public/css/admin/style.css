@@ -1,0 +1,354 @@
+@CHARSET "UTF-8";
+/* 
+    Document   : admin/style.css
+    Created on : Apr 11, 2011, 11:15:27 AM
+    Author     : Medina
+    Description: Mainly structure of the software
+*/
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border-collapse: collapse;
+    font-family: 'Arial';
+    font-size: 11px;
+}
+body {
+    background: #FFF repeat-x top left url(../../img/admin/bg_body.png);
+}
+#body {
+    display: table;
+    width: 1000px;
+    margin: auto;
+    min-width: 1000px;
+    background: #FFF;
+    border-left:1px solid #999;
+    border-right:1px solid #999;
+}
+
+#top, #menu, #content, #footer {
+    float:left;
+    display:block;
+    width:100%;
+}
+
+/*********************
+  Top
+*********************/
+#top {
+    background: repeat-x top left url(../../img/admin/header_top_bg.gif);
+    height: 40px;
+}
+#top #userInfo {
+    float:right;
+    color:#FFF;
+    line-height:25px;
+    margin:5px 5px 0 0;
+}
+#top #userInfo span {
+    margin:15px;
+}
+#top #userInfo img {
+    vertical-align:middle;
+    border:none;
+}
+#top #userInfo a {
+    color:#FFC402;
+}
+#top h1 {
+    display:block;
+    width:65px;
+    height:25px;
+    background:no-repeat center center url(../../img/admin/logo.png);
+    text-overflow:hidden;
+    text-indent:-9999px;
+    margin:5px 0 0 5px;
+}
+ul.flashMessenger {
+    display: block;
+    width: 100%;
+    list-style: none;
+}
+ul.flashMessenger li {
+    display: block;
+    padding: 1px 10px 1px 20px;
+    margin-bottom: 4px;
+    line-height: 22px;
+    background: #F9F5D1;
+    text-indent: 10px;
+    border: 1px solid #FFC402;
+}
+
+ul.flashMessenger li a.fmBtnClose {
+    color: #069;
+    float: right;
+}
+
+ul.flashMessenger li {
+    background-repeat: no-repeat;
+    background-position: 5px 5px;
+}
+
+ul.flashMessenger li.msg_message {
+    background-image: url(../../img/icons/help.png);
+}
+
+ul.flashMessenger li.error_message {
+    background-image: url(../../img/icons/error.png);
+}
+
+ul.flashMessenger li.info_message {
+    background-image: url(../../img/icons/information.png);
+}
+
+ul.flashMessenger li.success_message {
+    background-image: url(../../img/icons/accept.png);
+}
+
+ul.flashMessenger li.warning_message {
+    background-image: url(../../img/icons/exclamation.png);
+}
+
+
+/*********************
+  Menu
+*********************/
+#menu {
+    float:left;
+    clear:both;
+    display:table;
+    width:100%;
+    padding:2px 0;
+    line-height:21px;
+    border-bottom: 1px solid #999;
+    background:#eee;
+}
+
+/*********************
+  Content
+*********************/
+#content .contentPadding {
+    display: block;
+    margin:0 5px 0 5px;
+}
+#panelPage {
+    display:table;
+    width:100%;
+    border-bottom:2px solid #E0E0E0;
+    margin:5px 0;
+}
+#panelPage .left {
+    float:right;
+}
+h4 {
+    color:#F79C00;
+    font-size:13px;
+    background:url(../../img/icons/folder.png) no-repeat left center;
+    text-indent:25px;
+    line-height:25px;
+}
+
+/* Footer */
+#footer {
+    background:repeat-x 0 -20px url(../../img/admin/footer_bg.gif) #E0E0E0;
+    padding:80px 0 10px 0;
+    margin-top:10px;
+}
+#footer p {
+    text-align:right;
+    margin-right: 5px;
+}
+
+/*********************
+  Buttons
+*********************/
+button, .btn, button.back, .btnBack {
+    background: url(../../img/admin/btn_bg.gif) repeat-x scroll 0 0 #F77C16;
+    border-color: #ED6502 #A04300 #A04300 #ED6502;
+    border-style: solid;
+    border-width: 1px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 0 7px 1px;
+    text-align: center !important;
+    white-space: nowrap;
+    line-height: 16.5px;
+    display: inline-block;
+}
+button.back span, .btnBack span {
+    background: no-repeat url(../../img/admin/icon_btn_back.gif) left top;
+    padding-left:18px;
+}
+button.add span, .btnAdd span {
+    background: no-repeat url(../../img/admin/add_btn_icon.gif) left top;
+    padding-left:18px;
+}
+button:hover, .btn:hover {
+    background: url(../../img/admin/btn_bg_over.gif) repeat-x scroll 0 0 #F77C16;
+}
+button.back, .btnBack {
+    background: url(../../img/admin/btn_bg_back.gif) repeat-x scroll 0 0 #F77C16;
+    background-color: #FFFFFF;
+    border-color: #CCCCCC #AAAAAA #AAAAAA #CCCCCC;
+    color: #555555;
+}
+button.back:hover, .btnBack:hover {
+    background: url(../../img/admin/btn_bg_back.gif) repeat-x scroll 0 0 #F77C16;
+}
+
+input, select {
+    line-height:20px;
+    height:20px;
+    margin: 0;
+    border: 1px solid #CCC;
+}
+
+/*********************
+  Grid
+*********************/
+.gControl, .gMassAction {
+    display: table;
+    width: 100%;
+    margin-bottom: 5px;
+}
+.gControl div {
+    float:left;
+}
+.gPager {
+    width: 500px;
+}
+.gPager img {
+    vertical-align: middle;
+}
+.gExport {
+    width: 170px;
+}
+.gExport select {
+    width: 90px;
+    vertical-align: top;
+}
+div.gFilter {
+    float: right;
+    text-align: right;
+    width: 318px;
+}
+.gMassAction {
+    background: repeat-x top left url(../../img/admin/massaction_bg.gif);
+    border: 1px solid #CCC;
+    line-height: 24px;
+}
+.gSelect {
+    float: left;
+    margin-left: 10px;
+}
+.gSelect a {
+    color: #ED6502;
+}
+.gSelect span {
+    margin: 0 5px;
+}
+.gAction {
+    float: right;
+    margin-right: 10px;
+}
+.gAction select {
+    width: 100px;
+}
+/* Grid - Table */
+.gTable {
+    width: 100%;
+    margin-bottom: 5px;
+}
+.gTable tr.gRowColor td {
+    background: #EDEDED;
+}
+.gTable td {
+    border-left: 1px solid #EDFFF9;
+    border-right: 1px solid #EDFFF9;
+    border-bottom: 1px solid #EDFFF9;
+    padding: 0 2px;
+}
+.gTTitle {
+    height: 25px;
+}
+.gTTitle td {
+    background: repeat-x center center url(../../img/admin/sort_row_bg.gif);
+}
+.gTTitle td a {
+    color: #333;
+    font-weight: bold;
+}
+.gTTitle a.sortArrowAsc, .gTTitle a.sortArrowDesc {
+    display: block;
+    background: repeat-x top left url(../../img/admin/sort_on_bg.gif);
+}
+.gTTitle td a span {
+    display: block;
+    line-height: 20px;
+    margin: 0 5px;
+}
+.gTTitle a.sortArrowAsc span {
+    background: no-repeat right center url(../../img/admin/grid_sort_asc.gif);
+}
+.gTTitle a.sortArrowDesc span {
+    background: no-repeat right center url(../../img/admin/grid_sort_desc.gif);
+}
+.gTFilter {
+    background: #D6E8F5;
+    height: 30px;
+}
+.gTResultSet input[type=checkbox] {
+    border: 0;
+}
+.gTResultSet .gRowCheck {
+    text-align: center;
+    width: 22px;
+}
+
+/* grid table rows' options */
+.gTdOpcRow {
+    width: 22px;
+}
+
+.gOpcRow {
+    position: relative;
+}
+.gOpcRow ul {
+    list-style: none;
+}
+.gOpcRow ul li ul {
+    display: none;
+}
+.gOpcRow ul li:hover ul {
+    display: block;
+}
+.gOpcRow ul li ul {
+    position: absolute;
+    top:0;
+    left:17px;
+    border: 1px double #DEDEDE;
+}
+.gOpcRow ul li ul li {
+    background: #F3F3F3;
+    border: 1px dotted #FFF;
+    line-height: 18px;
+}
+.gOpcRow ul li ul li:hover {
+    background: #D6E8F5;
+}
+.gOpcRow a {
+    width: 210px;
+    display: inline-block;
+    text-indent: 25px;
+    line-height: 22px;
+    background: 4px no-repeat url(../../img/icons/application_edit.png);
+    color: #333;
+}
+.gOpcRow a.view {
+    background-image: url(../../img/icons/zoom.png);
+}
+.gOpcRow a.del {
+    background-image: url(../../img/icons/delete.png);
+}

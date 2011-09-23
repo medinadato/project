@@ -1,0 +1,56 @@
+@CHARSET "UTF-8";
+/*
+    Document   : admin/login.css
+    Created on : Apr 13, 2011, 11:15:27 AM
+    Author     : Medina
+    Description: Login structure
+*/
+
+#loginBlock {
+  display: block;
+  width: 300px;
+  height: 200px;
+  margin: 50px auto;
+  background: #FFF;
+  padding: 15px;
+}
+fieldset {
+  border: 2px solid #D0DEF1;
+  border-radius: 7px;
+  moz-border-radius: 7px;
+  padding: 10px 20px 20px 30px;
+  background: #F3F3F3;
+}
+fieldset legend {
+  color: #1c94c4;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 5px;
+  moz-border-radius: 5px;
+  line-height: 40px;
+  padding: 4px;
+}
+fieldset dt {
+  float: left;
+  clear: left;
+  width: 50px;
+}
+fieldset dd {
+  float:left;
+  height: 40px;
+}
+ul.errors {
+  list-style: none;
+}
+ul.errors li {
+  color: #F00;
+  line-height: 20px;
+  font-size: 9px;
+  font-style: italic;
+}
+
+#footer {
+  bottom: 0;
+  width: 100px;
+}
+

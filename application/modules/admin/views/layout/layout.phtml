@@ -1,0 +1,62 @@
+<?php echo $this->doctype(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Language" content="pt-br" />
+	<meta name="Keywords" content="" />
+	<meta name="Description" content="" />
+	<meta name="url" content="http://www.servfacil.com" />
+	<meta name="reply-to" content="info@servfacil.com" />
+	<meta name="copyright" content="www.servfacil.com" />
+	<meta name="category" content="Internet" />
+	<meta name="Robots" content="Index,Follow" />
+	<meta name="author" content="Renato Medina" />
+	<title>WMS-MS</title>
+	<link rel="shortcut icon" href="<?php echo $this->baseUrl('img/admin/favicon.ico') ?>" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="<?php echo $this->baseUrl('css/jquery/menu.css') ?>" />
+    </head>
+    <body>
+	<div id="body">
+	    <div id="top">
+		<div id="userInfo">
+		    <img src="<?php //echo $this->baseUrl('img/icons/user.png'); ?>" alt="#" /> Logado como <?php //echo $this->nomeUsuario . ' [' . $this->perfilUsuario . ']' ; ?>
+		    <span>|</span>
+		    <?php setlocale(LC_ALL, NULL); setlocale(LC_ALL, 'pt_BR'); echo ucfirst(gmstrftime("%A, %d de %B de %Y")); ?>
+		    <span>|</span>
+		    <a href="<?php //echo $this->url(array('controller' => 'auth', 'action' => 'logout')); ?>" title="Desconectar" ><img src="<?php //echo $this->baseUrl('img/icons/door_out.png'); ?>" alt="#" /> Sair</a>
+		</div>
+		<h1><a href="#" title="MDN">MDN</a></h1>
+	    </div>
+	    <div id="menu">
+		<?php 
+		$this->navigation()->menu()->setUlClass('clickMenu');
+		echo $this->navigation(); 
+		?>
+	    </div>
+	    <div id="content">
+		<div class="contentPadding">
+		    <div id="panelPage">
+			<?php if (is_object($this->page)) { ?>
+			<div class="left">
+			    <?php foreach ($this->page->getButtons() as $button) {
+				if ($button->getTag() == 'a') { ?>
+				<a href="<?php echo $this->url($button->getUrlParams());?>" class="btn <?php echo $button->getCssClass()?>"><span><?php echo $button->getLabel(); ?></span></a>
+				<?php } else { ?>
+				<button class="btn <?php echo $button->getCssClass()?>"><span><?php echo $button->getLabel(); ?></span></button>
+				<?php } 
+			    } ?>
+			</div>
+			<?php } ?>
+			<h4><?php echo $this->title;?></h4>
+		    </div>
+		    <?php //$this->messenger(); ?>
+		    <?php echo $this->layout()->content ?>
+		</div>
+	    </div>
+	    <div id="footer">
+		<p>MDN <?php date('Y') ?></p>
+		<p>&copy; Todos os Direitos Reservados.</p>
+	    </div>
+	</div>
+    </body>
+</html>

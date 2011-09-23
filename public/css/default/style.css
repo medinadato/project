@@ -1,0 +1,12 @@
+@CHARSET "UTF-8";
+/*
+    Document   : admin/style.css
+    Created on : Apr 11, 2011, 11:15:27 AM
+    Author     : Medina
+    Description: Mainly structure of the default module
+*/
+
+body {
+  background: no-repeat center 30px #000 url(../../img/default/bg_body.png);
+}
+

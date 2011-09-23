@@ -8,7 +8,22 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
      */
     protected function _initAutoloaderNamespaces()
     {
-	
+	require_once APPLICATION_PATH . '/../library/Doctrine/Common/ClassLoader.php';
+        
+	//third party namespaced libraries
+	$vendors = array(
+	    'Core'    => null,
+	    'Zend'    => null,
+	    'ZendX'   => null,
+	    'App'     => null
+	);
+
+	$autoloader = \Zend_Loader_Autoloader::getInstance();
+
+	foreach ($vendors as $vendor => $path) {
+	    $fmmAutoloader = new \Doctrine\Common\ClassLoader($vendor, $path);
+	    $autoloader->pushAutoloader(array($fmmAutoloader, 'loadClass'), $vendor);
+	}
     }
 
     /**
@@ -18,7 +33,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
     {
 	$autoloader = \Zend_Loader_Autoloader::getInstance();
 	$autoloader->registerNamespace('Core');
-	$autoloader->registerNamespace('Mdn');
+	$autoloader->registerNamespace('App');
     }
 
     /**
@@ -26,10 +41,12 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
      */
     protected function _initAclNav()
     {
+        /*
 	// acl
 	$aclSetup = new \Core\Acl\Setup;
 	// navigation
 	$navSetup = new \Core\View\Navigation\Setup;
+        */
     }
 
     /**
@@ -57,6 +74,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
     {
 	$layout = $this->getResource('layout');
 	$view = $this->getResource('view');
+        /*
 	$navConfig = \Zend_Registry::get('navConfig');
 	$navContanier = new \Zend_Navigation($navConfig);
 	$nav = $view->navigation($navContanier);
@@ -67,6 +85,8 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 	    $acl = \Zend_Registry::get('acl');
 	    $nav->setAcl($acl)->setRole($role);
 	}
+         * 
+         */
     }
 
     /**
@@ -74,14 +94,16 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
      */
     protected function _initFlashMessenger()
     {
-	/** @var $flashMessenger Zend_Controller_Action_Helper_FlashMessenger */
+        /*
+	// @var $flashMessenger Zend_Controller_Action_Helper_FlashMessenger
 	$flashMessenger = \Zend_Controller_Action_HelperBroker::getStaticHelper('FlashMessenger');
 
 	if ($flashMessenger->hasMessages()) {
 	    $view = $this->getResource('view');
 	    $view->messages = $flashMessenger->getMessages();
 	}
+
+        */
     }
-    
 }
 

@@ -1,0 +1,76 @@
+<?php echo $this->doctype(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Language" content="pt-br" />
+	<meta name="Keywords" content="" />
+	<meta name="Description" content="" />
+	<meta name="url" content="http://www.wmsms.com.br" />
+	<meta name="reply-to" content="info@wmsms.com.br" />
+	<meta name="copyright" content="www.wmsms.com.br" />
+	<meta name="category" content="Internet" />
+	<meta name="Robots" content="Index,Follow" />
+	<meta name="author" content="Renato Medina" />
+	<title>WMS-MS</title>
+	<link rel="shortcut icon" href="<?php echo $this->baseUrl('../img/admin/favicon.ico') ?>" type="image/x-icon" />
+	<script type="text/javascript">
+	  <!--
+	  var ADMIN_URL = "<?php echo $this->serverUrl($this->baseUrl('/admin/')) ?>";
+	  -->
+	</script>
+	<?php
+	echo $this->jQuery()
+		// css
+		->addStylesheet($this->baseUrl("css/admin/style.css"))
+		->addStylesheet($this->baseUrl("css/jquery/ui.css"))
+		->addStylesheet($this->baseUrl("css/jquery/menu.css"))
+		// lib
+		//->addJavascriptFile($this->baseUrl("js/phpjs.js"))
+		//->addJavascriptFile($this->baseUrl("js/date.js"))
+		// jquery basics
+		->enable()
+		->setLocalPath($this->baseUrl("js/jquery.js"))
+		->uiEnable()
+		->setUiLocalPath($this->baseUrl("js/jquery/ui.js"))
+		/*
+		// validation
+		->addJavascriptFile($this->baseUrl("js/jquery/validate.js"))
+		->addJavascriptFile($this->baseUrl("js/jquery/validate/additional-methods.js"))
+		->addJavascriptFile($this->baseUrl("js/jquery/validate/messages/pt-br.js"))
+		// timePicker
+		->addJavascriptFile($this->baseUrl("js/jquery/utils.js"))
+		->addJavascriptFile($this->baseUrl("js/jquery/strings.js"))
+		->addJavascriptFile($this->baseUrl("js/jquery/anchorHandler.js"))
+		->addJavascriptFile($this->baseUrl("js/jquery/ui/timepickr.js"))
+		// others plugins
+		->addJavascriptFile($this->baseUrl("js/jquery/autocomplete.js"))
+		->addJavascriptFile($this->baseUrl("js/jquery/dimensions.js"))
+		
+		->addJavascriptFile($this->baseUrl("js/jquery/alphanumeric.js"))
+		->addJavascriptFile($this->baseUrl("js/jquery/meiomask.js"))
+		->addJavascriptFile($this->baseUrl("js/jquery/colorbox.js"))
+		->addJavascriptFile($this->baseUrl("js/jquery/tmpl.js"))
+		->addJavascriptFile($this->baseUrl("js/ckeditor/ckeditor.js"))
+		->addJavascriptFile($this->baseUrl("/js/cilens/grid.js"))
+		 */
+		// others plugins
+		->addJavascriptFile($this->baseUrl("js/jquery/menu.js"))
+		->addJavascriptFile($this->baseUrl("js/admin/default.js"));
+	?>
+  </head>
+  <body>
+	<div id="body">
+	  <div id="top">
+		<h1><a href="#" title="WMS-MS">WMS-MS</a></h1>
+	  </div>
+	  <div id="content">
+		<?php $this->messenger(); ?>
+		<?php echo $this->layout()->content; ?>
+	  </div>
+	  <div id="footer">
+		<p>Wms M&oacute;veis Simonetti 2011</p>
+		<p>&copy; Todos os Direitos Reservados.</p>
+	  </div>
+	</div>
+  </body>
+</html>

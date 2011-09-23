@@ -1,0 +1,160 @@
+/* 
+    Document   : form
+    Created on : Apr 15, 2011, 10:58:28 AM
+    Author     : medina
+    Description: Maintenance of form's style
+*/
+
+form {
+  display: block;
+  min-width: 990px;
+  width: 990px;
+}
+form fieldset {
+  border: 1px solid #D0DEF1;
+  padding: 10px;
+  background: #F3F3F3;
+  margin-bottom: 10px;
+}
+form fieldset legend {
+  color: #1c94c4;
+  font-weight: bold;
+  border-radius: 5px;
+  moz-border-radius: 5px;
+  padding-bottom: 3px;
+}
+form fieldset dt {
+  float: left;
+  width: 110px;
+  min-height: 40px;
+}
+form fieldset dd {
+  float: left;
+  width: 310px;
+  min-height: 40px;
+  margin-right: 20px;
+}
+
+form fieldset dt.depositoEndereco {
+  float: left;
+  width: 80px;
+  min-height: 40px;
+}
+form fieldset dd.depositoEndereco {
+  float: left;
+  width: 80px;
+  min-height: 40px;
+}
+
+form fieldset dt.depositoEnderecoIdentificacao {
+  float: left;
+  width: 95px;
+  min-height: 40px;
+}
+form fieldset dd.depositoEnderecoIdentificacao {
+  float: left;
+  width: 260px;
+  min-height: 40px;
+  margin-right: 20px;
+}
+
+form fieldset input[type=text], form fieldset select {
+  width: 265px;
+}
+
+select.pequeno {
+  width: 60px !important;
+}
+
+select.medio {
+  width: 180px !important;
+}
+
+select.grande {
+  width: 400px !important;
+}
+
+form fieldset textarea {
+    width: 300px;
+    height: 200px;
+}
+form fieldset input.btn {
+  width: auto;
+}
+form fieldset input.date {
+  width: 80px;
+  background: no-repeat left center url(../../img/icons/calendar.png) #FFF;
+  text-indent: 17px;
+}
+form fieldset input.required {
+  background-color: #F9ECE8;
+}
+form fieldset div.checkbox {
+  display: inline-block;
+  float: left;
+}
+form fieldset div.checkbox label {
+  line-height: 18px;
+  margin: 0 50px 0 5px;
+  float: right;
+}
+form fieldset div.checkbox input {
+  float: left;
+  border: none;
+}
+form input[type=checkbox] {
+    float: left;
+    margin-right: 5px;
+    margin-top: -2px;
+}
+
+form label {
+    display: block;
+}
+form fieldset dd.radio label {
+  line-height: 10px;
+  margin-right: 20px;
+}
+form fieldset dd.radio label input {
+  margin: 3px 4px 0 0;
+  height: 13px;
+  border: none;
+}
+form ul.errors {
+  list-style: none;
+}
+form ul.errors li, label.error {
+  color: #F00;
+  line-height: 18px;
+  font-size: 9px;
+  font-style: italic;
+}
+/* Validation */
+label.error {
+  display: block;
+  color: #F00;
+}
+
+input.caixa-alta {
+    text-transform: uppercase;
+}
+
+input.caixa-baixa {
+    text-transform: lowercase;
+}
+
+input.pequeno {
+    width: 60px !important;
+}
+
+input.mini {
+    width: 30px !important;
+}
+
+input.grande{
+    width: 400px !important;
+}
+
+input.medio {
+    width: 180px !important;
+}
